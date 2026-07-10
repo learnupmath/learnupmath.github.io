@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LearnUp: Math - تعلّم بذكاء</title>
-    <!-- استدعاء مكتبة Swiper للصور (Carousel) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-    <!-- خط عربي مميز (Cairo) -->
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
     
     <style>
@@ -170,15 +168,31 @@
             padding-bottom: 50px;
         }
 
+        /* التوسيط العمودي لضمان تناسق الصور القصيرة والطويلة معاً */
+        .swiper-wrapper {
+            align-items: center; 
+        }
+
+        /* الخصائص المشتركة لكل الشرائح */
         .swiper-slide {
             background-position: center;
             background-size: cover;
-            width: 280px; /* عرض شاشة الهاتف */
-            height: 550px; 
             border-radius: 25px;
             box-shadow: 0 15px 35px rgba(0,0,0,0.5);
             overflow: hidden;
             border: 4px solid #1f2937;
+        }
+
+        /* مقاس الصور العمودية (طولية) */
+        .slide-vertical {
+            width: 280px; 
+            height: 550px; 
+        }
+
+        /* مقاس الصور الأفقية (بالعرض) */
+        .slide-horizontal {
+            width: 550px; 
+            height: 310px; 
         }
 
         .swiper-slide img {
@@ -211,15 +225,24 @@
             text-decoration: underline;
         }
         
+        /* تعديلات للموبايل */
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.2rem; }
-            .swiper-slide { width: 240px; height: 480px; }
+            
+            /* تصغير الصور لتناسب شاشات الهواتف */
+            .slide-vertical { 
+                width: 240px; 
+                height: 480px; 
+            }
+            .slide-horizontal { 
+                width: 320px; 
+                height: 180px; 
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- Hero Section -->
     <section class="hero">
         <h1>تعلّم بذكاء.. وتفوق بثقة</h1>
         <p>رفيقك للنجاح والتفوق! تطبيق تعليمي متكامل يرافقك خطوة بخطوة في جميع المراحل الدراسية لضمان أفضل النتائج.</p>
@@ -233,30 +256,31 @@
         </a>
     </section>
 
-    <!-- App Gallery (Screenshots Slider) -->
     <section class="gallery-section">
         <h2 class="section-title">نظرة من داخل التطبيق</h2>
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-                <!-- الـ 11 صورة المرفوعة على imgbb -->
-                <div class="swiper-slide"><img src="https://i.ibb.co/G4kL7JXL/2.jpg" alt="LearnUp Screenshot"></div>
-                <div class="swiper-slide"><img src="https://i.ibb.co/6c53nss5/3.jpg" alt="LearnUp Screenshot"></div>
-                <div class="swiper-slide"><img src="https://i.ibb.co/TDf6Pc9P/4.jpg" alt="LearnUp Screenshot"></div>
-                <div class="swiper-slide"><img src="https://i.ibb.co/hFQHvRbP/5.jpg" alt="LearnUp Screenshot"></div>
-                <div class="swiper-slide"><img src="https://i.ibb.co/9HqPyjBw/6.jpg" alt="LearnUp Screenshot"></div>
-                <div class="swiper-slide"><img src="https://i.ibb.co/q3pbWvNH/7.jpg" alt="LearnUp Screenshot"></div>
-                <div class="swiper-slide"><img src="https://i.ibb.co/Fb1mqRh6/8.jpg" alt="LearnUp Screenshot"></div>
-                <div class="swiper-slide"><img src="https://i.ibb.co/N25S2GRf/12.jpg" alt="LearnUp Screenshot"></div>
-                <div class="swiper-slide"><img src="https://i.ibb.co/278831qJ/13.jpg" alt="LearnUp Screenshot"></div>
-                <div class="swiper-slide"><img src="https://i.ibb.co/ycfxkqtN/14.jpg" alt="LearnUp Screenshot"></div>
-                <div class="swiper-slide"><img src="https://i.ibb.co/yn8KWCvG/15.jpg" alt="LearnUp Screenshot"></div>
+                
+                <div class="swiper-slide slide-vertical"><img src="https://i.ibb.co/G4kL7JXL/2.jpg" alt="LearnUp Screenshot"></div>
+                <div class="swiper-slide slide-vertical"><img src="https://i.ibb.co/6c53nss5/3.jpg" alt="LearnUp Screenshot"></div>
+                
+                <div class="swiper-slide slide-horizontal"><img src="https://i.ibb.co/TDf6Pc9P/4.jpg" alt="LearnUp Screenshot"></div>
+                
+                <div class="swiper-slide slide-vertical"><img src="https://i.ibb.co/hFQHvRbP/5.jpg" alt="LearnUp Screenshot"></div>
+                <div class="swiper-slide slide-vertical"><img src="https://i.ibb.co/9HqPyjBw/6.jpg" alt="LearnUp Screenshot"></div>
+                
+                <div class="swiper-slide slide-horizontal"><img src="https://i.ibb.co/q3pbWvNH/7.jpg" alt="LearnUp Screenshot"></div>
+                
+                <div class="swiper-slide slide-horizontal"><img src="https://i.ibb.co/Fb1mqRh6/8.jpg" alt="LearnUp Screenshot"></div>
+                <div class="swiper-slide slide-vertical"><img src="https://i.ibb.co/N25S2GRf/12.jpg" alt="LearnUp Screenshot"></div>
+                <div class="swiper-slide slide-vertical"><img src="https://i.ibb.co/278831qJ/13.jpg" alt="LearnUp Screenshot"></div>
+                <div class="swiper-slide slide-vertical"><img src="https://i.ibb.co/ycfxkqtN/14.jpg" alt="LearnUp Screenshot"></div>
+                <div class="swiper-slide slide-horizontal"><img src="https://i.ibb.co/yn8KWCvG/15.jpg" alt="LearnUp Screenshot"></div>
             </div>
-            <!-- نقاط التمرير -->
             <div class="swiper-pagination"></div>
         </div>
     </section>
 
-    <!-- Features Grid -->
     <section class="features">
         <h2 class="section-title">ميزات صُممت لنجاحك</h2>
         <div class="grid">
@@ -275,13 +299,13 @@
             <div class="card">
                 <span class="card-icon">👨‍🏫</span>
                 <h3>حصص الدعم والتقوية</h3>
-                <p>نظم تدريسك بذكاء مع حصص دعم مصممة خصيصاً لمرافقتك وتطوير مستواك بشكل مستمر مع أفضل الأساتذة.</p>
+                <p>نظم تدريسك بذكاء مع حصص دعم مصممة خصيصاً لمرافقتك.</p>
             </div>
 
             <div class="card">
                 <span class="card-icon">📊</span>
                 <h3>لوحة إحصائيات ذكية</h3>
-                <p>لوحة تحكم تفاعلية تتيح لك متابعة تقدمك اليومي، إحصائيات نشاطك، وتخطيط مستقبلك الدراسي بدقة عالية.</p>
+                <p>لوحة تحكم تفاعلية تتيح لك متابعة تقدمك اليومي، إحصائياتك ونشاطك.</p>
             </div>
 
             <div class="card">
@@ -299,7 +323,7 @@
             <div class="card">
                 <span class="card-icon">🎨</span>
                 <h3>تخصيص كامل للمظهر</h3>
-                <p>اختر وضع المظهر الذي يناسبك (داكن، فاتح، أو تلقائي) لتجربة مريحة للعين، مع حماية سحابية عالية لبياناتك ومزامنتها.</p>
+                <p>اختر وضع المظهر الذي يناسبك (داكن، فاتح، تلوين، أو تلقائي) لتجربة مريحة للعين، مع حماية عالية لبياناتك ومزامنتها.</p>
             </div>
             
             <div class="card">
@@ -310,7 +334,6 @@
         </div>
     </section>
 
-    <!-- Bottom CTA -->
     <section class="cta">
         <h2 style="font-size: 2.2rem; margin-bottom: 15px;">ابدأ رحلة نجاحك الآن!</h2>
         <p style="color: var(--text-muted); margin-bottom: 25px;">تجربة تعلم متكاملة.. خطوة بخطوة. حمله الآن ولا تفوت الفرصة.</p>
@@ -322,13 +345,11 @@
             </div>
         </a>
         
-        <!-- رابط لسياسة الخصوصية -->
         <div class="footer-links">
             <a href="/سياسة-الخصوصية" target="_top">سياسة الخصوصية (Privacy Policy)</a>
         </div>
     </section>
 
-    <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script>
         var swiper = new Swiper(".mySwiper", {
