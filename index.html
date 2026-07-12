@@ -65,6 +65,38 @@
             margin-right: auto;
         }
 
+        /* Action Group (App Icon & Play Store Button) */
+        .action-group {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .app-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 8px 15px;
+            border-radius: 12px;
+            border: 1px solid #1f2937;
+        }
+
+        .app-brand img {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+        }
+
+        .app-brand span {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
         /* Play Store Button */
         .play-store-btn {
             display: inline-flex;
@@ -76,7 +108,6 @@
             text-decoration: none;
             border: 1px solid #333;
             transition: transform 0.3s, box-shadow 0.3s;
-            margin-top: 10px;
         }
 
         .play-store-btn:hover {
@@ -249,13 +280,20 @@
         <h1>تعلّم بذكاء.. وتفوق بثقة</h1>
         <p>رفيقك للنجاح والتفوق! تطبيق تعليمي متكامل يرافقك خطوة بخطوة في جميع المراحل الدراسية لضمان أفضل النتائج.</p>
         
-        <a href="https://play.google.com/store/apps/details?id=com.learnup.math" target="_blank" class="play-store-btn">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Play_Arrow_logo.svg" alt="Google Play">
-            <div class="play-store-text">
-                <small>احصل عليه من</small>
-                <strong>Google Play</strong>
+        <div class="action-group">
+            <div class="app-brand">
+                <img src="https://i.ibb.co/VpBs1bWt/icon.png" alt="LearnUp: Math">
+                <span>LearnUp: Math</span>
             </div>
-        </a>
+            
+            <a href="https://play.google.com/store/apps/details?id=com.learnup.math" target="_blank" class="play-store-btn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Play_Arrow_logo.svg" alt="Google Play">
+                <div class="play-store-text">
+                    <small>احصل عليه من</small>
+                    <strong>Google Play</strong>
+                </div>
+            </a>
+        </div>
     </section>
 
     <section class="gallery-section">
@@ -352,13 +390,21 @@
     <section class="cta">
         <h2 style="font-size: 2.2rem; margin-bottom: 15px;">ابدأ رحلة نجاحك الآن!</h2>
         <p style="color: var(--text-muted); margin-bottom: 25px;">تجربة تعلم متكاملة.. خطوة بخطوة. حمله الآن ولا تفوت الفرصة.</p>
-        <a href="https://play.google.com/store/apps/details?id=com.learnup.math" target="_blank" class="play-store-btn">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Play_Arrow_logo.svg" alt="Google Play">
-            <div class="play-store-text">
-                <small>حمله الآن من</small>
-                <strong>Google Play</strong>
+        
+        <div class="action-group">
+            <div class="app-brand">
+                <img src="https://i.ibb.co/VpBs1bWt/icon.png" alt="LearnUp: Math">
+                <span>LearnUp: Math</span>
             </div>
-        </a>
+            
+            <a href="https://play.google.com/store/apps/details?id=com.learnup.math" target="_blank" class="play-store-btn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Play_Arrow_logo.svg" alt="Google Play">
+                <div class="play-store-text">
+                    <small>حمله الآن من</small>
+                    <strong>Google Play</strong>
+                </div>
+            </a>
+        </div>
         
         <div class="footer-links">
             <a href="https://sites.google.com/view/learnup-math/home" target="_blank">سياسة الخصوصية (Privacy Policy)</a>
