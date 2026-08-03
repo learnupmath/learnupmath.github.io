@@ -39,6 +39,10 @@
             color: var(--text-main);
             overflow-x: hidden;
         }
+        
+        body.no-scroll {
+            overflow: hidden;
+        }
 
         /* Hero Section */
         .hero {
@@ -820,6 +824,7 @@
                         modalBody.innerHTML = pointsHtml;
                         
                         modal.style.display = 'flex';
+                        document.body.classList.add('no-scroll');
                         setTimeout(() => {
                             modal.classList.add('show');
                         }, 10);
@@ -830,6 +835,7 @@
             // Close Modal Handlers
             const closeModal = () => {
                 modal.classList.remove('show');
+                document.body.classList.remove('no-scroll');
                 setTimeout(() => {
                     modal.style.display = 'none';
                 }, 300);
