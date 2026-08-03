@@ -171,12 +171,16 @@
             padding: 25px;
             border-radius: 20px;
             border: 1px solid #1f2937;
-            transition: transform 0.3s, border-color 0.3s;
+            transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
         }
 
         .card:hover {
             transform: translateY(-5px);
             border-color: var(--primary);
+            box-shadow: 0 10px 20px rgba(139, 92, 246, 0.15);
         }
 
         .card h3 {
@@ -189,12 +193,131 @@
             color: var(--text-muted);
             font-size: 0.95rem;
             line-height: 1.6;
+            flex-grow: 1; /* Pushes the read-more to the bottom */
         }
 
         .card-icon {
             font-size: 2.5rem;
             margin-bottom: 15px;
             display: inline-block;
+        }
+        
+        .read-more {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: var(--primary);
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-top: 15px;
+            transition: gap 0.3s;
+        }
+
+        .card:hover .read-more {
+            gap: 10px;
+        }
+
+        .read-more svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1000; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            background-color: rgba(0, 0, 0, 0.7); 
+            backdrop-filter: blur(5px);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .modal.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 1;
+        }
+
+        .modal-content {
+            background-color: var(--card-bg);
+            margin: auto;
+            padding: 30px;
+            border: 1px solid var(--primary);
+            border-radius: 20px;
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+            transform: scale(0.8);
+            transition: transform 0.3s ease;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+        }
+
+        .modal.show .modal-content {
+            transform: scale(1);
+        }
+
+        .close-btn {
+            color: var(--text-muted);
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
+
+        .close-btn:hover {
+            color: var(--text-main);
+        }
+
+        .modal-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #1f2937;
+            padding-bottom: 15px;
+        }
+
+        .modal-icon {
+            font-size: 2.5rem;
+        }
+
+        .modal-title {
+            font-size: 1.5rem;
+            color: #e5e7eb;
+            margin: 0;
+        }
+
+        .modal-body ul {
+            list-style-type: none;
+            padding-right: 0;
+            margin: 0;
+        }
+
+        .modal-body ul li {
+            margin-bottom: 15px;
+            color: var(--text-muted);
+            font-size: 1rem;
+            line-height: 1.6;
+            position: relative;
+            padding-right: 25px;
+        }
+
+        .modal-body ul li::before {
+            content: '•';
+            color: var(--primary);
+            font-size: 1.5rem;
+            position: absolute;
+            right: 0;
+            top: -5px;
         }
 
         /* Swiper Carousel for App Screenshots */
@@ -277,8 +400,8 @@
 <body>
 
     <section class="hero">
-        <h1>تعلّم بذكاء.. وتفوق بثقة</h1>
-        <p>رفيقك للنجاح والتفوق! تطبيق تعليمي متكامل يرافقك خطوة بخطوة في جميع المراحل الدراسية لضمان أفضل النتائج.</p>
+        <h1>تعلّم بذكاء .. وتفوق بثقة</h1>
+        <p>رفيقك للنجاح والتفوق! تطبيق تعليمي مجاني متكامل يرافقك خطوة بخطوة في جميع المراحل الدراسية في الثانوي لضمان أفضل النتائج.</p>
         
         <div class="action-group">
             <div class="app-brand">
@@ -319,79 +442,161 @@
     <section class="features">
         <h2 class="section-title">ميزات صُممت لنجاحك</h2>
         <div class="grid">
-            <div class="card">
+            <div class="card" data-index="0">
                 <span class="card-icon">📚</span>
                 <h3>دروس وملخصات شاملة</h3>
-                <p>محتوى تعليمي متكامل ومنظم يجمع لك الدروس، الملخصات، المراجع وكل ما يحتاجه الأستاذ والتلميذ في مكان واحد للوصول السريع والفعال.</p>
+                <p>محتوى تعليمي متكامل ومنظم يجمع لك الدروس (المذكرات)، الملخصات، المراجع وكل ما يحتاجه الأستاذ والتلميذ في مكان واحد للوصول السريع والفعال.</p>
+                <div class="read-more">
+                    <span>عرض التفاصيل</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                </div>
             </div>
             
-            <div class="card">
+            <div class="card" data-index="1">
                 <span class="card-icon">🧠</span>
                 <h3>اختبر نفسك وطور ذكاءك</h3>
                 <p>نظام اختبارات ذكي وتقييم ذاتي فوري يساعدك على فهم نقاط قوتك، وتصحيح أخطائك، وتجاوز نقاط ضعفك بفعالية.</p>
+                <div class="read-more">
+                    <span>عرض التفاصيل</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                </div>
             </div>
 
-             <div class="card">
+             <div class="card" data-index="2">
                 <span class="card-icon">📇</span>
                 <h3>بطاقات الحفظ الذكية</h3>
                 <p>طريقتك الأسرع لتثبيت القوانين والمعلومات في الذاكرة للأبد.</p>
+                <div class="read-more">
+                    <span>عرض التفاصيل</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                </div>
             </div>
 
-            <div class="card">
+            <div class="card" data-index="3">
                 <span class="card-icon">👨‍🏫</span>
-                <h3>حصص الدعم والتقوية</h3>
-                <p>أستاذنا نظم حصص الدعم والتقوية الخاصة بك بذكاء وركز على تدريسك للمادة.</p>
+                <h3>إدارة حصص الدعم والتقوية</h3>
+                <p>نظام متكامل للأساتذة لإدارة الدروس الخصوصية، تسيير الأقسام، وتتبع الحضور والجانب المالي باحترافية.</p>
+                <div class="read-more">
+                    <span>عرض التفاصيل</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                </div>
             </div>
 
-            <div class="card">
+            <div class="card" data-index="4">
                 <span class="card-icon">🛒</span>
                 <h3>متجر التطبيق (متجر الأساتذة الآمن)</h3>
                 <p>اضمن حقوقك وبع ملفاتك بأمان! متجر خاص يتيح للأساتذة بيع ملفاتهم التعليمية مع تشفير كامل يمنع الطبع والتداول، وصلاحية محددة بفترة زمنية للمشترين.</p>
+                <div class="read-more">
+                    <span>عرض التفاصيل</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                </div>
             </div>
 
-            <div class="card">
+            <div class="card" data-index="5">
                 <span class="card-icon">🧮</span>
                 <h3>حساب المعدل الفصلي</h3>
                 <p>أدوات دقيقة وسهلة الاستخدام لحساب معدلاتك الفصلية وتتبع مسارك الأكاديمي بدقة خطوة بخطوة.</p>
+                <div class="read-more">
+                    <span>عرض التفاصيل</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                </div>
             </div>
              
-            <div class="card">
+            <div class="card" data-index="6">
                 <span class="card-icon">🤝</span>
                 <h3>شارك ملفاتك التعليمية</h3>
                 <p>ساهم بمحتواك وكن جزءاً من التطوير. شارك ملفات الـ PDF الخاصة بك واستفد من مجتمع تعليمي متكامل لتبادل الفائدة.</p>
+                <div class="read-more">
+                    <span>عرض التفاصيل</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                </div>
             </div>
             
-            <div class="card">
+            <div class="card" data-index="7">
                 <span class="card-icon">📊</span>
                 <h3>لوحة إحصائيات ذكية</h3>
                 <p>لوحة تحكم تفاعلية تتيح لك متابعة تقدمك اليومي، إحصائياتك ونشاطك.</p>
+                <div class="read-more">
+                    <span>عرض التفاصيل</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                </div>
             </div>
 
-            <div class="card">
+            <div class="card" data-index="8">
                 <span class="card-icon">⏱️</span>
                 <h3>تنظيم الوقت بذكاء</h3>
                 <p>استخدم مؤقت "بومودورو" المدمج لزيادة التركيز، إدارة جلسات المذاكرة، وتحقيق إنجاز أسرع دون إرهاق.</p>
+                <div class="read-more">
+                    <span>عرض التفاصيل</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                </div>
             </div>
 
-            <div class="card">
+            <div class="card" data-index="9">
                 <span class="card-icon">⏳</span>
                 <h3>العد التنازلي للامتحانات</h3>
                 <p>كن مستعداً دائماً مع ميزة متابعة الوقت المتبقي للامتحانات الهامة لضمان تخطيط دراسي مثالي.</p>
+                <div class="read-more">
+                    <span>عرض التفاصيل</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                </div>
             </div>
 
-            <div class="card">
+            <div class="card" data-index="10">
                 <span class="card-icon">🎁</span>
                 <h3>مكافآت ومهام يومية</h3>
                 <p>تحفيز مستمر! أكمل المهام الدراسية اليومية واجمع النقاط والعملات التي تتوج مجهودك.</p>
+                <div class="read-more">
+                    <span>عرض التفاصيل</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                </div>
             </div>
 
-            <div class="card">
+            <div class="card" data-index="11">
                 <span class="card-icon">🎨</span>
                 <h3>تخصيص كامل للمظهر</h3>
                 <p>اختر وضع المظهر الذي يناسبك (داكن، فاتح، تلوين، أو تلقائي) لتجربة مريح للعين، مع حماية عالية لبياناتك ومزامنتها.</p>
+                <div class="read-more">
+                    <span>عرض التفاصيل</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                </div>
+            </div>
+
+            <div class="card" data-index="12">
+                <span class="card-icon">📅</span>
+                <h3>جدول رزنامة الحصص</h3>
+                <p>تنظيم وإدارة أوقات الحصص الدراسية والمراجعات في رزنامة ذكية لتجنب أي تعارض في المواعيد.</p>
+                <div class="read-more">
+                    <span>عرض التفاصيل</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                </div>
+            </div>
+
+            <div class="card" data-index="13">
+                <span class="card-icon">🔢</span>
+                <h3>حاسبة العلامات</h3>
+                <p>أداة مخصصة لحساب العلامة النهائية للمادة بدقة عبر جمع العلامات الفرعية لكل سؤال أو تمرين.</p>
+                <div class="read-more">
+                    <span>عرض التفاصيل</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                </div>
             </div>
         </div>
     </section>
+
+    <!-- Modal Element -->
+    <div id="featureModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-header">
+                <span class="modal-icon" id="modalIcon"></span>
+                <h3 class="modal-title" id="modalTitle"></h3>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Details will be injected here via JavaScript -->
+            </div>
+        </div>
+    </div>
 
     <section class="cta">
         <h2 style="font-size: 2.2rem; margin-bottom: 15px;">ابدأ رحلة نجاحك الآن!</h2>
@@ -423,27 +628,220 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script>
-        var swiper = new Swiper(".mySwiper", {
-            effect: "coverflow",
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: "auto",
-            loop: true,
-            autoplay: {
-                delay: 2000,
-                disableOnInteraction: false,
-            },
-            coverflowEffect: {
-                rotate: 0,
-                stretch: -20,
-                depth: 150,
-                modifier: 2,
-                slideShadows: true,
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
+        document.addEventListener("DOMContentLoaded", function() {
+            var swiper = new Swiper(".mySwiper", {
+                effect: "coverflow",
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: "auto",
+                loop: true,
+                autoplay: {
+                    delay: 2000,
+                    disableOnInteraction: false,
+                },
+                coverflowEffect: {
+                    rotate: 0,
+                    stretch: -20,
+                    depth: 150,
+                    modifier: 2,
+                    slideShadows: true,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+
+            // Feature Details Data
+            const featureDetails = [
+                {
+                    icon: '📚',
+                    title: 'دروس وملخصات شاملة',
+                    points: [
+                        'وصول سريع ومباشر إلى جميع الدروس (المذكرات) المقررة مرتبة بحسب المحاور الدراسية.',
+                        'ملخصات دقيقة ومبسطة لتسهيل المراجعة السريعة قبل الامتحانات.',
+                        'خرائط ذهنية وسلاسل تمارين من إعداد أشهر الأساتذة.',
+                        'اختبارات، فروض وواجبات السنوات السابقة بالحلول المفصلة لمختلف ثانويات الوطن.',
+                        'مجموعة واسعة من المراجع والكتب الخارجية بصيغة PDF قابلة للتصفح.',
+                        'تحديث مستمر للمحتوى لضمان حصولك على أحدث المعلومات وأوثقها.'
+                    ]
+                },
+                {
+                    icon: '🧠',
+                    title: 'اختبر نفسك وطور ذكاءك',
+                    points: [
+                        'بنك أسئلة شامل ومتنوع يغطي كافة وحدات المقرر الدراسي بدقة.',
+                        'نظام تصحيح فوري للإجابات مع تقديم شرح مبسط للحل المفصل.',
+                        'تتبع ذكي لمستوى تقدمك مع تحليل دقيق لنقاط ضعفك للتركيز عليها.',
+                        'اختبارات تفاعلية مصممة خصيصاً لتحفيز الذاكرة وتنمية مهارات التفكير المنطقي.'
+                    ]
+                },
+                {
+                    icon: '📇',
+                    title: 'بطاقات الحفظ الذكية',
+                    points: [
+                        'تعتمد على تقنية "التكرار المتباعد" (Spaced Repetition) لتثبيت الحفظ في الذاكرة طويلة المدى.',
+                        'مجموعة واسعة من البطاقات الجاهزة للقوانين الرياضية والمصطلحات الهامة.',
+                        'أداة ممتازة للمراجعة السريعة والفعالة في أي وقت وأي مكان.'
+                    ]
+                },
+                {
+                    icon: '👨‍🏫',
+                    title: 'إدارة حصص الدعم والتقوية',
+                    points: [
+                        'إنشاء أقسام افتراضية وإضافة التلاميذ إليها لتنظيم مجموعات الدروس الخصوصية بسهولة.',
+                        'نظام ذكي لتسجيل ومتابعة حضور وغياب كل تلميذ في كل حصة بشكل دقيق.',
+                        'إدارة مالية متكاملة لتتبع مدفوعات التلاميذ، ومراقبة المداخيل الشهرية والكلية لكل قسم.',
+                        'لوحة إحصائيات شاملة تمنح الأستاذ رؤية واضحة حول نشاط القسم والجانب المالي.'
+                    ]
+                },
+                {
+                    icon: '🛒',
+                    title: 'متجر التطبيق (متجر الأساتذة الآمن)',
+                    points: [
+                        'متجر مخصصة للأساتذة لبيع وعرض ملفاتهم ومذكراتهم التعليمية بسهولة.',
+                        'حماية فائقة للملفات من خلال تشفير متقدم يمنع الطباعة وإعادة النشر.',
+                        'نظام تحديد مدة صلاحية للملفات المباعة لضمان وحماية حقوق الملكية الفكرية.',
+                        'عملية شراء رقمية سلسة، آمنة، وسريعة من داخل التطبيق للطلاب.'
+                    ]
+                },
+                {
+                    icon: '🧮',
+                    title: 'حساب المعدل الفصلي',
+                    points: [
+                        'حاسبة دقيقة وشاملة لجميع المستويات الدراسية في الثانوي وفق المعايير الرسمية.',
+                        'إمكانية إدخال نقاط الفروض والاختبارات والتقويم للمواد بسهولة تامة.',
+                        'حفظ تلقائي لنتائجك لمقارنتها لاحقاً وتتبع مسارك وتطورك الأكاديمي.',
+                        'واجهة بسيطة وواضحة تظهر لك معدل المواد والمعدل العام تلقائيا بخطوات سريعة.'
+                    ]
+                },
+                {
+                    icon: '🤝',
+                    title: 'شارك ملفاتك التعليمية',
+                    points: [
+                        'القدرة على رفع ومشاركة ملفاتك التعليمية وملخصاتك الخاصة مع باقي المستخدمين.',
+                        'بناء مجتمع تعليمي تعاوني ونشط لتبادل الخبرات والمعرفة بين الطلاب.',
+                        'مساحة تخزين آمنة وسريعة لرفع ملفاتك ومستنداتك بصيغة PDF.'
+                    ]
+                },
+                {
+                    icon: '📊',
+                    title: 'لوحة إحصائيات ذكية',
+                    points: [
+                        'رسوم بيانية تفاعلية توضح بالتفصيل نشاطك اليومي، الأسبوعي، والشهري.',
+                        'تتبع دقيق لعدد الساعات الدراسية، والاختبارات المنجزة، ومستوى التفاعل.',
+                        'مقارنة شاملة للأداء في مختلف المحاور لتحديد النقاط التي تحتاج إلى دعم إضافي.',
+                        'تحليلات واستنتاجات ذكية تساعدك على تحسين وتطوير روتينك الدراسي.'
+                    ]
+                },
+                {
+                    icon: '⏱️',
+                    title: 'تنظيم الوقت بذكاء',
+                    points: [
+                        'مؤقت "بومودورو" مدمج.',
+                        'إمكانية التخصيص الكامل لأوقات جلسات الدراسة وفترات الراحة بما يناسبك.',
+                        'تنبيهات صوتية وإشعارات لطيفة لضمان الالتزام الصارم بالوقت المخطط.',
+                        'طريقة فعالة جداً لتجنب الإرهاق الذهني وزيادة الإنتاجية والتركيز.'
+                    ]
+                },
+                {
+                    icon: '⏳',
+                    title: 'العد التنازلي للامتحانات',
+                    points: [
+                        'إضافة وتتبع تواريخ الامتحانات المصيرية والهامة (مثل الباكالوريا أو الشهادات).',
+                        'عداد تنازلي دقيق ولحظي يظهر الوقت المتبقي باليوم، الساعة، الدقيقة والثانية.',
+                        'أداة مساعدة لا غنى عنها لتنظيم خطة وجدول المراجعة بناءً على الوقت المتبقي.'
+                    ]
+                },
+                {
+                    icon: '🎁',
+                    title: 'مكافآت ومهام يومية',
+                    points: [
+                        'قائمة متجددة للمهام اليومية (Daily Quests) لخلق حافز مستمر للتعلم.',
+                        'كسب عملات افتراضية ونقاط عند الالتزام بالدراسة وإكمال الاختبارات.',
+                        'عجلة حظ يومية تتيح لك فرصة ربح مكافآت وجوائز إضافية.',
+                        'إمكانية استخدام العملات لفتح ميزات متقدمة أو إزالة الإعلانات من التطبيق.'
+                    ]
+                },
+                {
+                    icon: '🎨',
+                    title: 'تخصيص كامل للمظهر',
+                    points: [
+                        'دعم احترافي وكامل للوضع الداكن (Dark Mode) والوضع الفاتح (Light Mode).',
+                        'خيار المزامنة التلقائية للمظهر مع إعدادات نظام تشغيل هاتفك.',
+                        'استخدام ألوان هادئة ومريحة للعين في تصميم عصري، حديث وسلس.',
+                        'خيارات تخصيص إضافية تتيح لك تغيير ألوان التطبيق الأساسية لتعكس شخصيتك.'
+                    ]
+                },
+                {
+                    icon: '📅',
+                    title: 'جدول رزنامة الحصص',
+                    points: [
+                        'إضافة وتعديل مواعيد الحصص الدراسية وحصص الدعم بكل سهولة في تقويم تفاعلي.',
+                        'إمكانية إضافة ملاحظات تفصيلية ومهام خاصة بكل حصة لضمان التحضير الجيد.',
+                        'تخصيص ألوان مختلفة لكل مادة لتسهيل قراءة الجدول وتمييز الحصص بسرعة.',
+                        'مزامنة الرزنامة لتنظيم وقتك بفعالية والبقاء على اطلاع دائم ببرنامجك الأسبوعي.'
+                    ]
+                },
+                {
+                    icon: '🔢',
+                    title: 'حاسبة العلامات',
+                    points: [
+                        'أداة ذكية لحساب العلامة النهائية للمادة من خلال جمع العلامات الفرعية لكل سؤال.',
+                        'تجنب أخطاء الحساب اليدوي لمعرفة علامتك الكاملة في الاختبار بدقة متناهية وسرعة.',
+                        'إمكانية مراجعة توزيع النقاط على التمارين لتقييم أدائك في كل جزء من الاختبار بشكل منفصل.',
+                        'واجهة بسيطة وعملية تتيح لك إدخال عدد لا نهائي من العلامات الفرعية بنقرة واحدة.'
+                    ]
+                }
+            ];
+
+            // Modal Logic
+            const cards = document.querySelectorAll('.card');
+            const modal = document.getElementById('featureModal');
+            const closeBtn = document.querySelector('.close-btn');
+            const modalIcon = document.getElementById('modalIcon');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalBody = document.getElementById('modalBody');
+
+            cards.forEach(card => {
+                card.addEventListener('click', () => {
+                    const index = parseInt(card.getAttribute('data-index'));
+                    const data = featureDetails[index];
+                    if(data) {
+                        modalIcon.textContent = data.icon;
+                        modalTitle.textContent = data.title;
+                        
+                        let pointsHtml = '<ul>';
+                        data.points.forEach(point => {
+                            pointsHtml += `<li>${point}</li>`;
+                        });
+                        pointsHtml += '</ul>';
+                        
+                        modalBody.innerHTML = pointsHtml;
+                        
+                        modal.style.display = 'flex';
+                        setTimeout(() => {
+                            modal.classList.add('show');
+                        }, 10);
+                    }
+                });
+            });
+
+            // Close Modal Handlers
+            const closeModal = () => {
+                modal.classList.remove('show');
+                setTimeout(() => {
+                    modal.style.display = 'none';
+                }, 300);
+            };
+
+            closeBtn.addEventListener('click', closeModal);
+
+            window.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
         });
     </script>
 </body>
