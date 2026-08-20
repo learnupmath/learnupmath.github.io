@@ -1,922 +1,919 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6NSFBHZF17"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6NSFBHZF17"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
 
-      gtag('config', 'G-6NSFBHZF17');
-    </script>
-    
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5291321163018460" crossorigin="anonymous"></script>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LearnUp: Math - تعلّم بذكاء</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --bg-color: #0b0f19;
-            --card-bg: #151b2b;
-            --primary: #8b5cf6;
-            --secondary: #3b82f6;
-            --text-main: #ffffff;
-            --text-muted: #9ca3af;
-        }
+      gtag('config', 'G-6NSFBHZF17');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnUp: Math - تعلّم بذكاء</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: #151b2b;
+            --primary: #8b5cf6;
+            --secondary: #3b82f6;
+            --text-main: #ffffff;
+            --text-muted: #9ca3af;
+        }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Cairo', sans-serif;
-        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Cairo', sans-serif;
+        }
 
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            overflow-x: hidden;
-        }
-        
-        body.no-scroll {
-            overflow: hidden;
-        }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            overflow-x: hidden;
+        }
+        
+        body.no-scroll {
+            overflow: hidden;
+        }
 
-        /* Hero Section */
-        .hero {
-            text-align: center;
-            padding: 60px 20px;
-            background: linear-gradient(180deg, #1e1b4b 0%, var(--bg-color) 100%);
-        }
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(180deg, #1e1b4b 0%, var(--bg-color) 100%);
+        }
 
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: 900;
-            margin-bottom: 15px;
-            background: linear-gradient(to left, #a78bfa, #60a5fa);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 900;
+            margin-bottom: 15px;
+            background: linear-gradient(to left, #a78bfa, #60a5fa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-        .hero p {
-            font-size: 1.2rem;
-            color: var(--text-muted);
-            margin-bottom: 30px;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-        /* Action Group (App Icon & Play Store Button) */
-        .action-group {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-top: 20px;
-        }
+        /* Action Group (App Icon & Play Store Button) */
+        .action-group {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
 
-        .app-brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            background: rgba(255, 255, 255, 0.05);
-            padding: 8px 15px;
-            border-radius: 12px;
-            border: 1px solid #1f2937;
-        }
+        .app-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 8px 15px;
+            border-radius: 12px;
+            border: 1px solid #1f2937;
+        }
 
-        .app-brand img {
-            width: 40px;
-            height: 40px;
-            border-radius: 10px;
-        }
+        .app-brand img {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+        }
 
-        .app-brand span {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: var(--text-main);
-        }
+        .app-brand span {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
 
-        /* Play Store Button */
-        .play-store-btn {
-            display: inline-flex;
-            align-items: center;
-            background: #000;
-            color: white;
-            padding: 10px 25px;
-            border-radius: 12px;
-            text-decoration: none;
-            border: 1px solid #333;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
+        /* Play Store Button */
+        .play-store-btn {
+            display: inline-flex;
+            align-items: center;
+            background: #000;
+            color: white;
+            padding: 10px 25px;
+            border-radius: 12px;
+            text-decoration: none;
+            border: 1px solid #333;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
 
-        .play-store-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(139, 92, 246, 0.3);
-        }
+        .play-store-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(139, 92, 246, 0.3);
+        }
 
-        .play-store-btn img {
-            height: 35px;
-            margin-left: 15px;
-        }
+        .play-store-btn img {
+            height: 35px;
+            margin-left: 15px;
+        }
 
-        .play-store-text {
-            text-align: right;
-            line-height: 1.2;
-        }
+        .play-store-text {
+            text-align: right;
+            line-height: 1.2;
+        }
 
-        .play-store-text small {
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+        .play-store-text small {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
 
-        .play-store-text strong {
-            font-size: 1.2rem;
-            display: block;
-        }
+        .play-store-text strong {
+            font-size: 1.2rem;
+            display: block;
+        }
 
-        /* Features Section */
-        .features {
-            padding: 40px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+        /* Features Section */
+        .features {
+            padding: 40px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-        .section-title {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 40px;
-            position: relative;
-        }
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+            position: relative;
+        }
 
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 60px;
-            height: 4px;
-            background: var(--primary);
-            margin: 10px auto 0;
-            border-radius: 2px;
-        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: var(--primary);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
 
-        .card {
-            background: var(--card-bg);
-            padding: 25px;
-            border-radius: 20px;
-            border: 1px solid #1f2937;
-            transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
-            cursor: pointer;
-            display: flex;
-            flex-direction: column;
-        }
+        .card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 20px;
+            border: 1px solid #1f2937;
+            transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+        }
 
-        .card:hover {
-            transform: translateY(-5px);
-            border-color: var(--primary);
-            box-shadow: 0 10px 20px rgba(139, 92, 246, 0.15);
-        }
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 20px rgba(139, 92, 246, 0.15);
+        }
 
-        .card h3 {
-            font-size: 1.4rem;
-            margin-bottom: 10px;
-            color: #e5e7eb;
-        }
+        .card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 10px;
+            color: #e5e7eb;
+        }
 
-        .card p {
-            color: var(--text-muted);
-            font-size: 0.95rem;
-            line-height: 1.6;
-            flex-grow: 1;
-        }
+        .card p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
 
-        .card-icon {
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-            display: inline-block;
-        }
-        
-        .read-more {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            color: var(--primary);
-            font-size: 0.95rem;
-            font-weight: 700;
-            margin-top: 15px;
-            transition: gap 0.3s;
-        }
+        .card-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+        
+        .read-more {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: var(--primary);
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-top: 15px;
+            transition: gap 0.3s;
+        }
 
-        .card:hover .read-more {
-            gap: 10px;
-        }
+        .card:hover .read-more {
+            gap: 10px;
+        }
 
-        .read-more svg {
-            width: 18px;
-            height: 18px;
-        }
+        .read-more svg {
+            width: 18px;
+            height: 18px;
+        }
 
-        /* Modal Styles */
-        .modal {
-            display: none; 
-            position: fixed; 
-            z-index: 1000; 
-            left: 0;
-            top: 0;
-            width: 100%; 
-            height: 100%; 
-            background-color: rgba(0, 0, 0, 0.7); 
-            backdrop-filter: blur(5px);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
+        /* Modal Styles */
+        .modal {
+            display: none; 
+            position: fixed; 
+            z-index: 1000; 
+            left: 0;
+            top: 0;
+            width: 100%; 
+            height: 100%; 
+            background-color: rgba(0, 0, 0, 0.7); 
+            backdrop-filter: blur(5px);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
 
-        .modal.show {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 1;
-        }
+        .modal.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 1;
+        }
 
-        .modal-content {
-            background-color: var(--card-bg);
-            margin: auto;
-            padding: 30px;
-            border: 1px solid var(--primary);
-            border-radius: 20px;
-            width: 90%;
-            max-width: 500px;
-            position: relative;
-            transform: scale(0.8);
-            transition: transform 0.3s ease;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
-        }
+        .modal-content {
+            background-color: var(--card-bg);
+            margin: auto;
+            padding: 30px;
+            border: 1px solid var(--primary);
+            border-radius: 20px;
+            width: 90%;
+            max-width: 500px;
+            position: relative;
+            transform: scale(0.8);
+            transition: transform 0.3s ease;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+        }
 
-        .modal.show .modal-content {
-            transform: scale(1);
-        }
+        .modal.show .modal-content {
+            transform: scale(1);
+        }
 
-        .close-btn {
-            color: var(--text-muted);
-            position: absolute;
-            top: 15px;
-            left: 20px;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-            transition: color 0.3s;
-        }
+        .close-btn {
+            color: var(--text-muted);
+            position: absolute;
+            top: 15px;
+            left: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s;
+        }
 
-        .close-btn:hover {
-            color: var(--text-main);
-        }
+        .close-btn:hover {
+            color: var(--text-main);
+        }
 
-        .modal-header {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            margin-bottom: 20px;
-            border-bottom: 1px solid #1f2937;
-            padding-bottom: 15px;
-        }
+        .modal-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #1f2937;
+            padding-bottom: 15px;
+        }
 
-        .modal-icon {
-            font-size: 2.5rem;
-        }
+        .modal-icon {
+            font-size: 2.5rem;
+        }
 
-        .modal-title {
-            font-size: 1.5rem;
-            color: #e5e7eb;
-            margin: 0;
-        }
+        .modal-title {
+            font-size: 1.5rem;
+            color: #e5e7eb;
+            margin: 0;
+        }
 
-        /* ----- تصميم التمرير داخل النافذة المنبثقة ----- */
-        .modal-body {
-            max-height: 60vh;
-            overflow-y: auto;
-            padding-left: 10px;
-        }
+        /* ----- تصميم التمرير داخل النافذة المنبثقة ----- */
+        .modal-body {
+            max-height: 60vh;
+            overflow-y: auto;
+            padding-left: 10px;
+        }
 
-        .modal-body::-webkit-scrollbar {
-            width: 6px;
-        }
-        .modal-body::-webkit-scrollbar-track {
-            background: rgba(255, 255, 255, 0.05); 
-            border-radius: 10px;
-        }
-        .modal-body::-webkit-scrollbar-thumb {
-            background: var(--primary); 
-            border-radius: 10px;
-        }
-        /* ------------------------------------------- */
+        .modal-body::-webkit-scrollbar {
+            width: 6px;
+        }
+        .modal-body::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05); 
+            border-radius: 10px;
+        }
+        .modal-body::-webkit-scrollbar-thumb {
+            background: var(--primary); 
+            border-radius: 10px;
+        }
+        /* ------------------------------------------- */
 
-        .modal-body ul {
-            list-style-type: none;
-            padding-right: 0;
-            margin: 0;
-        }
+        .modal-body ul {
+            list-style-type: none;
+            padding-right: 0;
+            margin: 0;
+        }
 
-        .modal-body ul li {
-            margin-bottom: 15px;
-            color: var(--text-muted);
-            font-size: 1rem;
-            line-height: 1.6;
-            position: relative;
-            padding-right: 25px;
-        }
+        .modal-body ul li {
+            margin-bottom: 15px;
+            color: var(--text-muted);
+            font-size: 1rem;
+            line-height: 1.6;
+            position: relative;
+            padding-right: 25px;
+        }
 
-        .modal-body ul li::before {
-            content: '•';
-            color: var(--primary);
-            font-size: 1.5rem;
-            position: absolute;
-            right: 0;
-            top: -5px;
-        }
+        .modal-body ul li::before {
+            content: '•';
+            color: var(--primary);
+            font-size: 1.5rem;
+            position: absolute;
+            right: 0;
+            top: -5px;
+        }
 
-        /* Swiper Carousel for App Screenshots */
-        .gallery-section {
-            padding: 40px 0 80px;
-            background: #0a0d14;
-        }
+        /* Swiper Carousel for App Screenshots */
+        .gallery-section {
+            padding: 40px 0 80px;
+            background: #0a0d14;
+        }
 
-        .swiper {
-            width: 100%;
-            padding-top: 50px;
-            padding-bottom: 50px;
-        }
+        .swiper {
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
 
-        .swiper-wrapper {
-            align-items: center; 
-        }
+        .swiper-wrapper {
+            align-items: center; 
+        }
 
-        .swiper-slide {
-            width: auto; 
-            height: 500px; 
-            border-radius: 25px;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
-            overflow: hidden;
-            border: 4px solid #1f2937;
-            background-color: var(--card-bg);
-        }
+        .swiper-slide {
+            width: auto; 
+            height: 500px; 
+            border-radius: 25px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+            overflow: hidden;
+            border: 4px solid #1f2937;
+            background-color: var(--card-bg);
+        }
 
-        .swiper-slide img {
-            display: block;
-            width: auto;
-            height: 100%; 
-            object-fit: contain; 
-        }
+        .swiper-slide img {
+            display: block;
+            width: auto;
+            height: 100%; 
+            object-fit: contain; 
+        }
 
-        /* Bottom CTA */
-        .cta {
-            text-align: center;
-            padding: 60px 20px;
-            background: linear-gradient(0deg, #1e1b4b 0%, var(--bg-color) 100%);
-        }
-        
-        .footer-links {
-            margin-top: 30px;
-        }
-        
-        .footer-links a {
-            color: #9ca3af;
-            text-decoration: none;
-            font-size: 0.95rem;
-            transition: color 0.3s;
-        }
-        
-        .footer-links a:hover {
-            color: #ffffff;
-            text-decoration: underline;
-        }
+        /* Bottom CTA */
+        .cta {
+            text-align: center;
+            padding: 60px 20px;
+            background: linear-gradient(0deg, #1e1b4b 0%, var(--bg-color) 100%);
+        }
+        
+        .footer-links {
+            margin-top: 30px;
+        }
+        
+        .footer-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
 
-        .developer-info {
-            color: var(--text-muted);
-            margin-top: 25px;
-            font-size: 0.9rem;
-            border-top: 1px solid #1f2937;
-            padding-top: 20px;
-            max-width: 500px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        /* تعديلات للموبايل */
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2rem; }
-            
-            .swiper-slide { 
-                height: 380px; 
-            }
-        }
-    </style>
+        .developer-info {
+            color: var(--text-muted);
+            margin-top: 25px;
+            font-size: 0.9rem;
+            border-top: 1px solid #1f2937;
+            padding-top: 20px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* تعديلات للموبايل */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            
+            .swiper-slide { 
+                height: 380px; 
+            }
+        }
+    </style>
 </head>
 <body>
 
-    <section class="hero">
-        <h1>تعلّم بذكاء .. وتفوق بثقة</h1>
-        <p>رفيقك للنجاح والتفوق! تطبيق تعليمي مجاني متكامل يرافقك خطوة بخطوة في جميع المراحل الدراسية في الثانوي لضمان أفضل النتائج.</p>
-        
-        <div class="action-group">
-            <div class="app-brand">
-                <img src="https://i.ibb.co/VpBs1bWt/icon.png" alt="LearnUp: Math">
-                <span>LearnUp: Math</span>
-            </div>
-            
-            <a href="https://play.google.com/store/apps/details?id=com.learnup.math" target="_blank" class="play-store-btn">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Play_Arrow_logo.svg" alt="Google Play">
-                <div class="play-store-text">
-                    <small>احصل عليه من</small>
-                    <strong>Google Play</strong>
-                </div>
-            </a>
-        </div>
-    </section>
+    <section class="hero">
+        <h1>تعلّم بذكاء .. وتفوق بثقة</h1>
+        <p>رفيقك للنجاح والتفوق! تطبيق تعليمي مجاني متكامل يرافقك خطوة بخطوة في جميع المراحل الدراسية في الثانوي لضمان أفضل النتائج.</p>
+        
+        <div class="action-group">
+            <div class="app-brand">
+                <img src="https://i.ibb.co/VpBs1bWt/icon.png" alt="LearnUp: Math">
+                <span>LearnUp: Math</span>
+            </div>
+            
+            <a href="https://play.google.com/store/apps/details?id=com.learnup.math" target="_blank" class="play-store-btn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Play_Arrow_logo.svg" alt="Google Play">
+                <div class="play-store-text">
+                    <small>احصل عليه من</small>
+                    <strong>Google Play</strong>
+                </div>
+            </a>
+        </div>
+    </section>
 
-    <section class="gallery-section">
-        <h2 class="section-title">نظرة من داخل التطبيق</h2>
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide"><img src="https://i.ibb.co/G4kL7JXL/2.jpg" alt="LearnUp Screenshot"></div>
-                <div class="swiper-slide"><img src="https://i.ibb.co/6c53nss5/3.jpg" alt="LearnUp Screenshot"></div>
-                <div class="swiper-slide"><img src="https://i.ibb.co/TDf6Pc9P/4.jpg" alt="LearnUp Screenshot"></div>
-                <div class="swiper-slide"><img src="https://i.ibb.co/hFQHvRbP/5.jpg" alt="LearnUp Screenshot"></div>
-                <div class="swiper-slide"><img src="https://i.ibb.co/9HqPyjBw/6.jpg" alt="LearnUp Screenshot"></div>
-                <div class="swiper-slide"><img src="https://i.ibb.co/q3pbWvNH/7.jpg" alt="LearnUp Screenshot"></div>
-                <div class="swiper-slide"><img src="https://i.ibb.co/Fb1mqRh6/8.jpg" alt="LearnUp Screenshot"></div>
-                <div class="swiper-slide"><img src="https://i.ibb.co/N25S2GRf/12.jpg" alt="LearnUp Screenshot"></div>
-                <div class="swiper-slide"><img src="https://i.ibb.co/278831qJ/13.jpg" alt="LearnUp Screenshot"></div>
-                <div class="swiper-slide"><img src="https://i.ibb.co/ycfxkqtN/14.jpg" alt="LearnUp Screenshot"></div>
-                <div class="swiper-slide"><img src="https://i.ibb.co/yn8KWCvG/15.jpg" alt="LearnUp Screenshot"></div>
-            </div>
-            <div class="swiper-pagination"></div>
-        </div>
-    </section>
+    <section class="gallery-section">
+        <h2 class="section-title">نظرة من داخل التطبيق</h2>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide"><img src="https://i.ibb.co/G4kL7JXL/2.jpg" alt="LearnUp Screenshot"></div>
+                <div class="swiper-slide"><img src="https://i.ibb.co/6c53nss5/3.jpg" alt="LearnUp Screenshot"></div>
+                <div class="swiper-slide"><img src="https://i.ibb.co/TDf6Pc9P/4.jpg" alt="LearnUp Screenshot"></div>
+                <div class="swiper-slide"><img src="https://i.ibb.co/hFQHvRbP/5.jpg" alt="LearnUp Screenshot"></div>
+                <div class="swiper-slide"><img src="https://i.ibb.co/9HqPyjBw/6.jpg" alt="LearnUp Screenshot"></div>
+                <div class="swiper-slide"><img src="https://i.ibb.co/q3pbWvNH/7.jpg" alt="LearnUp Screenshot"></div>
+                <div class="swiper-slide"><img src="https://i.ibb.co/Fb1mqRh6/8.jpg" alt="LearnUp Screenshot"></div>
+                <div class="swiper-slide"><img src="https://i.ibb.co/N25S2GRf/12.jpg" alt="LearnUp Screenshot"></div>
+                <div class="swiper-slide"><img src="https://i.ibb.co/278831qJ/13.jpg" alt="LearnUp Screenshot"></div>
+                <div class="swiper-slide"><img src="https://i.ibb.co/ycfxkqtN/14.jpg" alt="LearnUp Screenshot"></div>
+                <div class="swiper-slide"><img src="https://i.ibb.co/yn8KWCvG/15.jpg" alt="LearnUp Screenshot"></div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
 
-    <section class="features">
-        <h2 class="section-title">ميزات صُممت لنجاحك</h2>
-        <div class="grid">
-            
-            <div class="card" data-index="14">
-                <span class="card-icon">🧪</span>
-                <h3>المعمل الرياضي</h3>
-                <p>مجموعة متكاملة من الأدوات والآلات الحاسبة الذكية المصممة خصيصاً لمختلف محاور الرياضيات.</p>
-                <div class="read-more">
-                    <span>عرض التفاصيل</span>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
-                </div>
-            </div>
-            
-            <div class="card" data-index="0">
-                <span class="card-icon">📚</span>
-                <h3>دروس وملخصات شاملة</h3>
-                <p>محتوى تعليمي متكامل ومنظم يجمع لك الدروس (المذكرات)، الملخصات، المراجع وكل ما يحتاجه الأستاذ والتلميذ في مكان واحد للوصول السريع والفعال.</p>
-                <div class="read-more">
-                    <span>عرض التفاصيل</span>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
-                </div>
-            </div>
-            
-            <div class="card" data-index="1">
-                <span class="card-icon">🧠</span>
-                <h3>اختبر نفسك وطور ذكاءك</h3>
-                <p>نظام اختبارات ذكي وتقييم ذاتي فوري يساعدك على فهم نقاط قوتك، وتصحيح أخطائك، وتجاوز نقاط ضعفك بفعالية.</p>
-                <div class="read-more">
-                    <span>عرض التفاصيل</span>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
-                </div>
-            </div>
+    <section class="features">
+        <h2 class="section-title">ميزات صُممت لنجاحك</h2>
+        <div class="grid">
+            
+            <div class="card" data-index="14">
+                <span class="card-icon">🧪</span>
+                <h3>المعمل الرياضي</h3>
+                <p>مجموعة متكاملة من الأدوات والآلات الحاسبة الذكية المصممة خصيصاً لمختلف محاور الرياضيات.</p>
+                <div class="read-more">
+                    <span>عرض التفاصيل</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                </div>
+            </div>
+            
+            <div class="card" data-index="0">
+                <span class="card-icon">📚</span>
+                <h3>دروس وملخصات شاملة</h3>
+                <p>محتوى تعليمي متكامل ومنظم يجمع لك الدروس (المذكرات)، الملخصات، المراجع وكل ما يحتاجه الأستاذ والتلميذ في مكان واحد للوصول السريع والفعال.</p>
+                <div class="read-more">
+                    <span>عرض التفاصيل</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                </div>
+            </div>
+            
+            <div class="card" data-index="1">
+                <span class="card-icon">🧠</span>
+                <h3>اختبر نفسك وطور ذكاءك</h3>
+                <p>نظام اختبارات ذكي وتقييم ذاتي فوري يساعدك على فهم نقاط قوتك، وتصحيح أخطائك، وتجاوز نقاط ضعفك بفعالية.</p>
+                <div class="read-more">
+                    <span>عرض التفاصيل</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                </div>
+            </div>
 
-             <div class="card" data-index="2">
-                <span class="card-icon">📇</span>
-                <h3>بطاقات الحفظ الذكية</h3>
-                <p>طريقتك الأسرع لتثبيت القوانين والمعلومات في الذاكرة للأبد.</p>
-                <div class="read-more">
-                    <span>عرض التفاصيل</span>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
-                </div>
-            </div>
-            
-            <div class="card" data-index="15">
-                <span class="card-icon">🧩</span>
-                <h3>ألعاب العقل</h3>
-                <p>أضفنا ألعاباً ذكية لتنشيط ذاكرتك ورفع مستوى تركيزك وسرعة بديهتك.</p>
-                <div class="read-more">
-                    <span>عرض التفاصيل</span>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
-                </div>
-            </div>
+             <div class="card" data-index="2">
+                <span class="card-icon">📇</span>
+                <h3>بطاقات الحفظ الذكية</h3>
+                <p>طريقتك الأسرع لتثبيت القوانين والمعلومات في الذاكرة للأبد.</p>
+                <div class="read-more">
+                    <span>عرض التفاصيل</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                </div>
+            </div>
+            
+            <div class="card" data-index="15">
+                <span class="card-icon">🧩</span>
+                <h3>ألعاب العقل</h3>
+                <p>أضفنا ألعاباً ذكية لتنشيط ذاكرتك ورفع مستوى تركيزك وسرعة بديهتك.</p>
+                <div class="read-more">
+                    <span>عرض التفاصيل</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                </div>
+            </div>
 
-            <div class="card" data-index="3">
-                <span class="card-icon">👨🏫</span>
-                <h3>إدارة حصص الدعم والتقوية</h3>
-                <p>نظام متكامل للأساتذة لإدارة الدروس الخصوصية، تسيير الأقسام، وتتبع الحضور والجانب المالي باحترافية.</p>
-                <div class="read-more">
-                    <span>عرض التفاصيل</span>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
-                </div>
-            </div>
+            <div class="card" data-index="3">
+                <span class="card-icon">👨🏫</span>
+                <h3>إدارة حصص الدعم والتقوية</h3>
+                <p>نظام متكامل للأساتذة لإدارة الدروس الخصوصية، تسيير الأقسام، وتتبع الحضور والجانب المالي باحترافية.</p>
+                <div class="read-more">
+                    <span>عرض التفاصيل</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                </div>
+            </div>
 
-            <div class="card" data-index="4">
-                <span class="card-icon">🛒</span>
-                <h3>متجر التطبيق (متجر الأساتذة)</h3>
-                <p>اضمن حقوقك وبع ملفاتك بأمان! متجر خاص يتيح للأساتذة بيع ملفاتهم التعليمية مع تشفير كامل يمنع الطبع والتداول.</p>
-                <div class="read-more">
-                    <span>عرض التفاصيل</span>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
-                </div>
-            </div>
+            <div class="card" data-index="4">
+                <span class="card-icon">🛒</span>
+                <h3>متجر التطبيق (متجر الأساتذة)</h3>
+                <p>اضمن حقوقك وبع ملفاتك بأمان! متجر خاص يتيح للأساتذة بيع ملفاتهم التعليمية مع تشفير كامل يمنع الطبع والتداول.</p>
+                <div class="read-more">
+                    <span>عرض التفاصيل</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                </div>
+            </div>
 
-            <div class="card" data-index="5">
-                <span class="card-icon">🧮</span>
-                <h3>حساب المعدل الفصلي</h3>
-                <p>تحديث دقيق لجميع معاملات المواد لتتوافق مع آخر منشور وزاري، مع أدوات سهلة لتتبع مسارك الأكاديمي.</p>
-                <div class="read-more">
-                    <span>عرض التفاصيل</span>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
-                </div>
-            </div>
-             
-            <div class="card" data-index="6">
-                <span class="card-icon">🤝</span>
-                <h3>شارك ملفاتك التعليمية</h3>
-                <p>ساهم بمحتواك وكن جزءاً من التطوير. شارك ملفات الـ PDF الخاصة بك واستفد من مجتمع تعليمي متكامل لتبادل الفائدة.</p>
-                <div class="read-more">
-                    <span>عرض التفاصيل</span>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
-                </div>
-            </div>
-            
-            <div class="card" data-index="7">
-                <span class="card-icon">📊</span>
-                <h3>لوحة إحصائيات ذكية</h3>
-                <p>لوحة تحكم تفاعلية تتيح لك متابعة تقدمك اليومي، إحصائياتك ونشاطك.</p>
-                <div class="read-more">
-                    <span>عرض التفاصيل</span>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
-                </div>
-            </div>
+            <div class="card" data-index="5">
+                <span class="card-icon">🧮</span>
+                <h3>حساب المعدل الفصلي</h3>
+                <p>تحديث دقيق لجميع معاملات المواد لتتوافق مع آخر منشور وزاري، مع أدوات سهلة لتتبع مسارك الأكاديمي.</p>
+                <div class="read-more">
+                    <span>عرض التفاصيل</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                </div>
+            </div>
+             
+            <div class="card" data-index="6">
+                <span class="card-icon">🤝</span>
+                <h3>شارك ملفاتك التعليمية</h3>
+                <p>ساهم بمحتواك وكن جزءاً من التطوير. شارك ملفات الـ PDF الخاصة بك واستفد من مجتمع تعليمي متكامل لتبادل الفائدة.</p>
+                <div class="read-more">
+                    <span>عرض التفاصيل</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                </div>
+            </div>
+            
+            <div class="card" data-index="7">
+                <span class="card-icon">📊</span>
+                <h3>لوحة إحصائيات ذكية</h3>
+                <p>لوحة تحكم تفاعلية تتيح لك متابعة تقدمك اليومي، إحصائياتك ونشاطك.</p>
+                <div class="read-more">
+                    <span>عرض التفاصيل</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                </div>
+            </div>
 
-            <div class="card" data-index="8">
-                <span class="card-icon">⏱️</span>
-                <h3>تنظيم الوقت بذكاء</h3>
-                <p>استخدم مؤقت "بومودورو" المدمج لزيادة التركيز، إدارة جلسات المذاكرة، وتحقيق إنجاز أسرع دون إرهاق.</p>
-                <div class="read-more">
-                    <span>عرض التفاصيل</span>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
-                </div>
-            </div>
+            <div class="card" data-index="8">
+                <span class="card-icon">⏱️</span>
+                <h3>تنظيم الوقت بذكاء</h3>
+                <p>استخدم مؤقت "بومودورو" المدمج لزيادة التركيز، إدارة جلسات المذاكرة، وتحقيق إنجاز أسرع دون إرهاق.</p>
+                <div class="read-more">
+                    <span>عرض التفاصيل</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                </div>
+            </div>
 
-            <div class="card" data-index="9">
-                <span class="card-icon">⏳</span>
-                <h3>العد التنازلي للامتحانات</h3>
-                <p>كن مستعداً دائماً مع ميزة متابعة الوقت المتبقي للامتحانات الهامة لضمان تخطيط دراسي مثالي.</p>
-                <div class="read-more">
-                    <span>عرض التفاصيل</span>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
-                </div>
-            </div>
+            <div class="card" data-index="9">
+                <span class="card-icon">⏳</span>
+                <h3>العد التنازلي للامتحانات</h3>
+                <p>كن مستعداً دائماً مع ميزة متابعة الوقت المتبقي للامتحانات الهامة لضمان تخطيط دراسي مثالي.</p>
+                <div class="read-more">
+                    <span>عرض التفاصيل</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                </div>
+            </div>
 
-            <div class="card" data-index="10">
-                <span class="card-icon">🎁</span>
-                <h3>مكافآت ومهام يومية</h3>
-                <p>تحفيز مستمر! أكمل المهام الدراسية اليومية واجمع النقاط والعملات التي تتوج مجهودك.</p>
-                <div class="read-more">
-                    <span>عرض التفاصيل</span>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
-                </div>
-            </div>
+            <div class="card" data-index="10">
+                <span class="card-icon">🎁</span>
+                <h3>مكافآت ومهام يومية</h3>
+                <p>تحفيز مستمر! أكمل المهام الدراسية اليومية واجمع النقاط والعملات التي تتوج مجهودك.</p>
+                <div class="read-more">
+                    <span>عرض التفاصيل</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                </div>
+            </div>
 
-            <div class="card" data-index="11">
-                <span class="card-icon">🎨</span>
-                <h3>تخصيص كامل للمظهر</h3>
-                <p>اختر وضع المظهر الذي يناسبك (داكن، فاتح، تلوين، أو تلقائي) لتجربة مريح للعين، مع حماية عالية لبياناتك ومزامنتها.</p>
-                <div class="read-more">
-                    <span>عرض التفاصيل</span>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
-                </div>
-            </div>
+            <div class="card" data-index="11">
+                <span class="card-icon">🎨</span>
+                <h3>تخصيص كامل للمظهر</h3>
+                <p>اختر وضع المظهر الذي يناسبك (داكن، فاتح، تلوين، أو تلقائي) لتجربة مريح للعين، مع حماية عالية لبياناتك ومزامنتها.</p>
+                <div class="read-more">
+                    <span>عرض التفاصيل</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                </div>
+            </div>
 
-            <div class="card" data-index="12">
-                <span class="card-icon">📅</span>
-                <h3>جدول رزنامة الحصص</h3>
-                <p>تنظيم وإدارة أوقات الحصص الدراسية والمراجعات في رزنامة ذكية لتجنب أي تعارض في المواعيد.</p>
-                <div class="read-more">
-                    <span>عرض التفاصيل</span>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
-                </div>
-            </div>
+            <div class="card" data-index="12">
+                <span class="card-icon">📅</span>
+                <h3>جدول رزنامة الحصص</h3>
+                <p>تنظيم وإدارة أوقات الحصص الدراسية والمراجعات في رزنامة ذكية لتجنب أي تعارض في المواعيد.</p>
+                <div class="read-more">
+                    <span>عرض التفاصيل</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                </div>
+            </div>
 
-            <div class="card" data-index="13">
-                <span class="card-icon">🔢</span>
-                <h3>حاسبة العلامات</h3>
-                <p>أداة مخصصة لحساب العلامة النهائية للمادة بدقة عبر جمع العلامات الفرعية لكل سؤال أو تمرين.</p>
-                <div class="read-more">
-                    <span>عرض التفاصيل</span>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
-                </div>
-            </div>
-        </div>
-    </section>
+            <div class="card" data-index="13">
+                <span class="card-icon">🔢</span>
+                <h3>حاسبة العلامات</h3>
+                <p>أداة مخصصة لحساب العلامة النهائية للمادة بدقة عبر جمع العلامات الفرعية لكل سؤال أو تمرين.</p>
+                <div class="read-more">
+                    <span>عرض التفاصيل</span>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Modal Element -->
-    <div id="featureModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <div class="modal-header">
-                <span class="modal-icon" id="modalIcon"></span>
-                <h3 class="modal-title" id="modalTitle"></h3>
-            </div>
-            <div class="modal-body" id="modalBody">
-                <!-- Details will be injected here via JavaScript -->
-            </div>
-        </div>
-    </div>
+    <!-- Modal Element -->
+    <div id="featureModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-header">
+                <span class="modal-icon" id="modalIcon"></span>
+                <h3 class="modal-title" id="modalTitle"></h3>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- Details will be injected here via JavaScript -->
+            </div>
+        </div>
+    </div>
 
-    <section class="cta">
-        <h2 style="font-size: 2.2rem; margin-bottom: 15px;">ابدأ رحلة نجاحك الآن!</h2>
-        <p style="color: var(--text-muted); margin-bottom: 25px;">تجربة تعلم متكاملة.. خطوة بخطوة. حمله الآن ولا تفوت الفرصة.</p>
-        
-        <div class="action-group">
-            <div class="app-brand">
-                <img src="https://i.ibb.co/VpBs1bWt/icon.png" alt="LearnUp: Math">
-                <span>LearnUp: Math</span>
-            </div>
-            
-            <a href="https://play.google.com/store/apps/details?id=com.learnup.math" target="_blank" class="play-store-btn">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Play_Arrow_logo.svg" alt="Google Play">
-                <div class="play-store-text">
-                    <small>حمله الآن من</small>
-                    <strong>Google Play</strong>
-                </div>
-            </a>
-        </div>
-        
-        <div class="footer-links">
-            <a href="https://sites.google.com/view/learnup-math/home" target="_blank">سياسة الخصوصية (Privacy Policy)</a>
-        </div>
+    <section class="cta">
+        <h2 style="font-size: 2.2rem; margin-bottom: 15px;">ابدأ رحلة نجاحك الآن!</h2>
+        <p style="color: var(--text-muted); margin-bottom: 25px;">تجربة تعلم متكاملة.. خطوة بخطوة. حمله الآن ولا تفوت الفرصة.</p>
+        
+        <div class="action-group">
+            <div class="app-brand">
+                <img src="https://i.ibb.co/VpBs1bWt/icon.png" alt="LearnUp: Math">
+                <span>LearnUp: Math</span>
+            </div>
+            
+            <a href="https://play.google.com/store/apps/details?id=com.learnup.math" target="_blank" class="play-store-btn">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/d/d0/Google_Play_Arrow_logo.svg" alt="Google Play">
+                <div class="play-store-text">
+                    <small>حمله الآن من</small>
+                    <strong>Google Play</strong>
+                </div>
+            </a>
+        </div>
+        
+        <div class="footer-links">
+            <a href="https://sites.google.com/view/learnup-math/home" target="_blank">سياسة الخصوصية (Privacy Policy)</a>
+        </div>
 
-        <p class="developer-info">
-             © 2026 LearnUp Dev - الأستاذ حلاسي عماد الدين. جميع الحقوق محفوظة
-        </p>
-    </section>
+        <p class="developer-info">
+             © 2026 LearnUp Dev - الأستاذ حلاسي عماد الدين. جميع الحقوق محفوظة
+        </p>
+    </section>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            var swiper = new Swiper(".mySwiper", {
-                effect: "coverflow",
-                grabCursor: true,
-                centeredSlides: true,
-                slidesPerView: "auto",
-                loop: true,
-                autoplay: {
-                    delay: 2000,
-                    disableOnInteraction: false,
-                },
-                coverflowEffect: {
-                    rotate: 0,
-                    stretch: -20,
-                    depth: 150,
-                    modifier: 2,
-                    slideShadows: true,
-                },
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-                },
-            });
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var swiper = new Swiper(".mySwiper", {
+                effect: "coverflow",
+                grabCursor: true,
+                centeredSlides: true,
+                slidesPerView: "auto",
+                loop: true,
+                autoplay: {
+                    delay: 2000,
+                    disableOnInteraction: false,
+                },
+                coverflowEffect: {
+                    rotate: 0,
+                    stretch: -20,
+                    depth: 150,
+                    modifier: 2,
+                    slideShadows: true,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
 
-            // Feature Details Data
-            const featureDetails = {
-                0: {
-                    icon: '📚',
-                    title: 'دروس وملخصات شاملة',
-                    points: [
-                        'وصول سريع ومباشر إلى جميع الدروس (المذكرات) المقررة مرتبة بحسب المحاور الدراسية.',
-                        'ملخصات دقيقة ومبسطة لتسهيل المراجعة السريعة قبل الامتحانات.',
-                        'خرائط ذهنية وسلاسل تمارين من إعداد أشهر الأساتذة.',
-                        'اختبارات، فروض وواجبات السنوات السابقة بالحلول المفصلة لمختلف ثانويات الوطن.',
-                        'مجموعة واسعة من المراجع والكتب الخارجية بصيغة PDF قابلة للتصفح.',
-                        'تحديث مستمر للمحتوى لضمان حصولك على أحدث المعلومات وأوثقها.'
-                    ]
-                },
-                1: {
-                    icon: '🧠',
-                    title: 'اختبر نفسك وطور ذكاءك',
-                    points: [
-                        'بنك أسئلة شامل ومتنوع يغطي كافة وحدات المقرر الدراسي بدقة.',
-                        'نظام تصحيح فوري للإجابات مع تقديم شرح مبسط للحل المفصل.',
-                        'تتبع ذكي لمستوى تقدمك مع تحليل دقيق لنقاط ضعفك للتركيز عليها.',
-                        'اختبارات تفاعلية مصممة خصيصاً لتحفيز الذاكرة وتنمية مهارات التفكير المنطقي.'
-                    ]
-                },
-                2: {
-                    icon: '📇',
-                    title: 'بطاقات الحفظ الذكية',
-                    points: [
-                        'تعتمد على تقنية "التكرار المتباعد" (Spaced Repetition) لتثبيت الحفظ في الذاكرة طويلة المدى.',
-                        'مجموعة واسعة من البطاقات الجاهزة للقوانين الرياضية والمصطلحات الهامة.',
-                        'أداة ممتازة للمراجعة السريعة والفعالة في أي وقت وأي مكان.'
-                    ]
-                },
-                3: {
-                    icon: '👨🏫',
-                    title: 'إدارة حصص الدعم والتقوية',
-                    points: [
-                        'إنشاء أقسام افتراضية وإضافة التلاميذ إليها لتنظيم مجموعات الدروس الخصوصية بسهولة.',
-                        'نظام ذكي لتسجيل ومتابعة حضور وغياب كل تلميذ في كل حصة بشكل دقيق.',
-                        'إدارة مالية متكاملة لتتبع مدفوعات التلاميذ، ومراقبة المداخيل الشهرية والكلية لكل قسم.',
-                        'لوحة إحصائيات شاملة تمنح الأستاذ رؤية واضحة حول نشاط القسم والجانب المالي.'
-                    ]
-                },
-                4: {
-                    icon: '🛒',
-                    title: 'متجر التطبيق (متجر الأساتذة الآمن)',
-                    points: [
-                        'متجر مخصصة للأساتذة لبيع وعرض ملفاتهم ومذكراتهم التعليمية بسهولة.',
-                        'حماية فائقة للملفات من خلال تشفير متقدم يمنع الطباعة وإعادة النشر.',
-                        'نظام تحديد مدة صلاحية للملفات المباعة لضمان وحماية حقوق الملكية الفكرية.',
-                        'عملية شراء رقمية سلسة، آمنة، وسريعة من داخل التطبيق للطلاب.'
-                    ]
-                },
-                5: {
-                    icon: '🧮',
-                    title: 'حساب المعدل الفصلي',
-                    points: [
-                        'حاسبة دقيقة وشاملة لجميع المستويات الدراسية في الثانوي وفق المعايير الرسمية.',
-                        'تحديث دقيق لجميع معاملات المواد لتتوافق مع آخر منشور وزاري.',
-                        'إمكانية إدخال نقاط الفروض والاختبارات والتقويم للمواد بسهولة تامة.',
-                        'حفظ تلقائي لنتائجك لمقارنتها لاحقاً وتتبع مسارك وتطورك الأكاديمي.',
-                        'واجهة بسيطة وواضحة تظهر لك معدل المواد والمعدل العام تلقائيا بخطوات سريعة.'
-                    ]
-                },
-                6: {
-                    icon: '🤝',
-                    title: 'شارك ملفاتك التعليمية',
-                    points: [
-                        'القدرة على رفع ومشاركة ملفاتك التعليمية وملخصاتك الخاصة مع باقي المستخدمين.',
-                        'بناء مجتمع تعليمي تعاوني ونشط لتبادل الخبرات والمعرفة بين الطلاب.',
-                        'مساحة تخزين آمنة وسريعة لرفع ملفاتك ومستنداتك بصيغة PDF.'
-                    ]
-                },
-                7: {
-                    icon: '📊',
-                    title: 'لوحة إحصائيات ذكية',
-                    points: [
-                        'رسوم بيانية تفاعلية توضح بالتفصيل نشاطك اليومي، الأسبوعي، والشهري.',
-                        'تتبع دقيق لعدد الساعات الدراسية، والاختبارات المنجزة، ومستوى التفاعل.',
-                        'مقارنة شاملة للأداء في مختلف المحاور لتحديد النقاط التي تحتاج إلى دعم إضافي.',
-                        'تحليلات واستنتاجات ذكية تساعدك على تحسين وتطوير روتينك الدراسي.'
-                    ]
-                },
-                8: {
-                    icon: '⏱️',
-                    title: 'تنظيم الوقت بذكاء',
-                    points: [
-                        'مؤقت "بومودورو" مدمج.',
-                        'إمكانية التخصيص الكامل لأوقات جلسات الدراسة وفترات الراحة بما يناسبك.',
-                        'تنبيهات صوتية وإشعارات لطيفة لضمان الالتزام الصارم بالوقت المخطط.',
-                        'طريقة فعالة جداً لتجنب الإرهاق الذهني وزيادة الإنتاجية والتركيز.'
-                    ]
-                },
-                9: {
-                    icon: '⏳',
-                    title: 'العد التنازلي للامتحانات',
-                    points: [
-                        'إضافة وتتبع تواريخ الامتحانات المصيرية والهامة (مثل الباكالوريا أو الشهادات).',
-                        'عداد تنازلي دقيق ولحظي يظهر الوقت المتبقي باليوم، الساعة، الدقيقة والثانية.',
-                        'أداة مساعدة لا غنى عنها لتنظيم خطة وجدول المراجعة بناءً على الوقت المتبقي.'
-                    ]
-                },
-                10: {
-                    icon: '🎁',
-                    title: 'مكافآت ومهام يومية',
-                    points: [
-                        'قائمة متجددة للمهام اليومية (Daily Quests) لخلق حافز مستمر للتعلم.',
-                        'كسب عملات افتراضية ونقاط عند الالتزام بالدراسة وإكمال الاختبارات.',
-                        'عجلة حظ يومية تتيح لك فرصة ربح مكافآت وجوائز إضافية.',
-                        'إمكانية استخدام العملات لفتح ميزات متقدمة أو إزالة الإعلانات من التطبيق.'
-                    ]
-                },
-                11: {
-                    icon: '🎨',
-                    title: 'تخصيص كامل للمظهر',
-                    points: [
-                        'دعم احترافي وكامل للوضع الداكن (Dark Mode) والوضع الفاتح (Light Mode).',
-                        'خيار المزامنة التلقائية للمظهر مع إعدادات نظام تشغيل هاتفك.',
-                        'استخدام ألوان هادئة ومريحة للعين في تصميم عصري، حديث وسلس.',
-                        'خيارات تخصيص إضافية تتيح لك تغيير ألوان التطبيق الأساسية لتعكس شخصيتك.'
-                    ]
-                },
-                12: {
-                    icon: '📅',
-                    title: 'جدول رزنامة الحصص',
-                    points: [
-                        'إضافة وتعديل مواعيد الحصص الدراسية وحصص الدعم بكل سهولة في تقويم تفاعلي.',
-                        'إمكانية إضافة ملاحظات تفصيلية ومهام خاصة بكل حصة لضمان التحضير الجيد.',
-                        'تخصيص ألوان مختلفة لكل مادة لتسهيل قراءة الجدول وتمييز الحصص بسرعة.',
-                        'مزامنة الرزنامة لتنظيم وقتك بفعالية والبقاء على اطلاع دائم ببرنامجك الأسبوعي.'
-                    ]
-                },
-                13: {
-                    icon: '🔢',
-                    title: 'حاسبة العلامات',
-                    points: [
-                        'أداة ذكية لحساب العلامة النهائية للمادة من خلال جمع العلامات الفرعية لكل سؤال.',
-                        'تجنب أخطاء الحساب اليدوي لمعرفة علامتك الكاملة في الاختبار بدقة متناهية وسرعة.',
-                        'إمكانية مراجعة توزيع النقاط على التمارين لتقييم أدائك في كل جزء من الاختبار بشكل منفصل.',
-                        'واجهة بسيطة وعملية تتيح لك إدخال عدد لا نهائي من العلامات الفرعية بنقرة واحدة.'
-                    ]
-                },
-                14: {
-                    icon: '🧪',
-                    title: 'المعمل الرياضي',
-                    points: [
-                        'حساب المثلثات: أدوات متقدمة للتعامل مع الزوايا والدوال المثلثية.',
-                        'الدوال والتحليل: دراسة تفصيلية للدوال، حساب النهايات، المشتقات والتكاملات.',
-                        'الجبر وكثيرات الحدود: حل المعادلات من مختلف الدرجات وتبسيط العبارات الجبرية.',
-                        'الحساب في ℤ (القسمة والموافقات): حساب القاسم المشترك الأكبر (PGCD)، المضاعف المشترك الأصغر، والأعداد الأولية.',
-                        'الاحتمالات: حساب التوفيقات، الترتيبات، والقوائم لحل مسائل الاحتمالات.',
-                        'المتتاليات العددية: أدوات مخصصة لحساب حدود المتتاليات الحسابية والهندسية.',
-                        'الأعداد المركبة: العمليات الأساسية على الأعداد المركبة، الشكل الجبري، الطويلة والمدة.'
-                    ]
-                },
-                15: {
-                    icon: '🧩',
-                    title: 'ألعاب العقل',
-                    points: [
-                        'مجموعة من الألعاب الذكية المصممة خصيصاً لتنشيط الذاكرة.',
-                        'رفع مستوى التركيز وسرعة البديهة من خلال تحديات ممتعة.',
-                        'استراحة تعليمية مفيدة بعيداً عن ضغط المذاكرة.',
-                        'كسب نقاط وخبرات (XP) إضافية عند إكمال التحديات بنجاح.'
-                    ]
-                }
-            };
+            // Feature Details Data
+            const featureDetails = {
+                0: {
+                    icon: '📚',
+                    title: 'دروس وملخصات شاملة',
+                    points: [
+                        'وصول سريع ومباشر إلى جميع الدروس (المذكرات) المقررة مرتبة بحسب المحاور الدراسية.',
+                        'ملخصات دقيقة ومبسطة لتسهيل المراجعة السريعة قبل الامتحانات.',
+                        'خرائط ذهنية وسلاسل تمارين من إعداد أشهر الأساتذة.',
+                        'اختبارات، فروض وواجبات السنوات السابقة بالحلول المفصلة لمختلف ثانويات الوطن.',
+                        'مجموعة واسعة من المراجع والكتب الخارجية بصيغة PDF قابلة للتصفح.',
+                        'تحديث مستمر للمحتوى لضمان حصولك على أحدث المعلومات وأوثقها.'
+                    ]
+                },
+                1: {
+                    icon: '🧠',
+                    title: 'اختبر نفسك وطور ذكاءك',
+                    points: [
+                        'بنك أسئلة شامل ومتنوع يغطي كافة وحدات المقرر الدراسي بدقة.',
+                        'نظام تصحيح فوري للإجابات مع تقديم شرح مبسط للحل المفصل.',
+                        'تتبع ذكي لمستوى تقدمك مع تحليل دقيق لنقاط ضعفك للتركيز عليها.',
+                        'اختبارات تفاعلية مصممة خصيصاً لتحفيز الذاكرة وتنمية مهارات التفكير المنطقي.'
+                    ]
+                },
+                2: {
+                    icon: '📇',
+                    title: 'بطاقات الحفظ الذكية',
+                    points: [
+                        'تعتمد على تقنية "التكرار المتباعد" (Spaced Repetition) لتثبيت الحفظ في الذاكرة طويلة المدى.',
+                        'مجموعة واسعة من البطاقات الجاهزة للقوانين الرياضية والمصطلحات الهامة.',
+                        'أداة ممتازة للمراجعة السريعة والفعالة في أي وقت وأي مكان.'
+                    ]
+                },
+                3: {
+                    icon: '👨🏫',
+                    title: 'إدارة حصص الدعم والتقوية',
+                    points: [
+                        'إنشاء أقسام افتراضية وإضافة التلاميذ إليها لتنظيم مجموعات الدروس الخصوصية بسهولة.',
+                        'نظام ذكي لتسجيل ومتابعة حضور وغياب كل تلميذ في كل حصة بشكل دقيق.',
+                        'إدارة مالية متكاملة لتتبع مدفوعات التلاميذ، ومراقبة المداخيل الشهرية والكلية لكل قسم.',
+                        'لوحة إحصائيات شاملة تمنح الأستاذ رؤية واضحة حول نشاط القسم والجانب المالي.'
+                    ]
+                },
+                4: {
+                    icon: '🛒',
+                    title: 'متجر التطبيق (متجر الأساتذة الآمن)',
+                    points: [
+                        'متجر مخصصة للأساتذة لبيع وعرض ملفاتهم ومذكراتهم التعليمية بسهولة.',
+                        'حماية فائقة للملفات من خلال تشفير متقدم يمنع الطباعة وإعادة النشر.',
+                        'نظام تحديد مدة صلاحية للملفات المباعة لضمان وحماية حقوق الملكية الفكرية.',
+                        'عملية شراء رقمية سلسة، آمنة، وسريعة من داخل التطبيق للطلاب.'
+                    ]
+                },
+                5: {
+                    icon: '🧮',
+                    title: 'حساب المعدل الفصلي',
+                    points: [
+                        'حاسبة دقيقة وشاملة لجميع المستويات الدراسية في الثانوي وفق المعايير الرسمية.',
+                        'تحديث دقيق لجميع معاملات المواد لتتوافق مع آخر منشور وزاري.',
+                        'إمكانية إدخال نقاط الفروض والاختبارات والتقويم للمواد بسهولة تامة.',
+                        'حفظ تلقائي لنتائجك لمقارنتها لاحقاً وتتبع مسارك وتطورك الأكاديمي.',
+                        'واجهة بسيطة وواضحة تظهر لك معدل المواد والمعدل العام تلقائيا بخطوات سريعة.'
+                    ]
+                },
+                6: {
+                    icon: '🤝',
+                    title: 'شارك ملفاتك التعليمية',
+                    points: [
+                        'القدرة على رفع ومشاركة ملفاتك التعليمية وملخصاتك الخاصة مع باقي المستخدمين.',
+                        'بناء مجتمع تعليمي تعاوني ونشط لتبادل الخبرات والمعرفة بين الطلاب.',
+                        'مساحة تخزين آمنة وسريعة لرفع ملفاتك ومستنداتك بصيغة PDF.'
+                    ]
+                },
+                7: {
+                    icon: '📊',
+                    title: 'لوحة إحصائيات ذكية',
+                    points: [
+                        'رسوم بيانية تفاعلية توضح بالتفصيل نشاطك اليومي، الأسبوعي، والشهري.',
+                        'تتبع دقيق لعدد الساعات الدراسية، والاختبارات المنجزة، ومستوى التفاعل.',
+                        'مقارنة شاملة للأداء في مختلف المحاور لتحديد النقاط التي تحتاج إلى دعم إضافي.',
+                        'تحليلات واستنتاجات ذكية تساعدك على تحسين وتطوير روتينك الدراسي.'
+                    ]
+                },
+                8: {
+                    icon: '⏱️',
+                    title: 'تنظيم الوقت بذكاء',
+                    points: [
+                        'مؤقت "بومودورو" مدمج.',
+                        'إمكانية التخصيص الكامل لأوقات جلسات الدراسة وفترات الراحة بما يناسبك.',
+                        'تنبيهات صوتية وإشعارات لطيفة لضمان الالتزام الصارم بالوقت المخطط.',
+                        'طريقة فعالة جداً لتجنب الإرهاق الذهني وزيادة الإنتاجية والتركيز.'
+                    ]
+                },
+                9: {
+                    icon: '⏳',
+                    title: 'العد التنازلي للامتحانات',
+                    points: [
+                        'إضافة وتتبع تواريخ الامتحانات المصيرية والهامة (مثل الباكالوريا أو الشهادات).',
+                        'عداد تنازلي دقيق ولحظي يظهر الوقت المتبقي باليوم، الساعة، الدقيقة والثانية.',
+                        'أداة مساعدة لا غنى عنها لتنظيم خطة وجدول المراجعة بناءً على الوقت المتبقي.'
+                    ]
+                },
+                10: {
+                    icon: '🎁',
+                    title: 'مكافآت ومهام يومية',
+                    points: [
+                        'قائمة متجددة للمهام اليومية (Daily Quests) لخلق حافز مستمر للتعلم.',
+                        'كسب عملات افتراضية ونقاط عند الالتزام بالدراسة وإكمال الاختبارات.',
+                        'عجلة حظ يومية تتيح لك فرصة ربح مكافآت وجوائز إضافية.',
+                        'إمكانية استخدام العملات لفتح ميزات متقدمة أو إزالة الإعلانات من التطبيق.'
+                    ]
+                },
+                11: {
+                    icon: '🎨',
+                    title: 'تخصيص كامل للمظهر',
+                    points: [
+                        'دعم احترافي وكامل للوضع الداكن (Dark Mode) والوضع الفاتح (Light Mode).',
+                        'خيار المزامنة التلقائية للمظهر مع إعدادات نظام تشغيل هاتفك.',
+                        'استخدام ألوان هادئة ومريحة للعين في تصميم عصري، حديث وسلس.',
+                        'خيارات تخصيص إضافية تتيح لك تغيير ألوان التطبيق الأساسية لتعكس شخصيتك.'
+                    ]
+                },
+                12: {
+                    icon: '📅',
+                    title: 'جدول رزنامة الحصص',
+                    points: [
+                        'إضافة وتعديل مواعيد الحصص الدراسية وحصص الدعم بكل سهولة في تقويم تفاعلي.',
+                        'إمكانية إضافة ملاحظات تفصيلية ومهام خاصة بكل حصة لضمان التحضير الجيد.',
+                        'تخصيص ألوان مختلفة لكل مادة لتسهيل قراءة الجدول وتمييز الحصص بسرعة.',
+                        'مزامنة الرزنامة لتنظيم وقتك بفعالية والبقاء على اطلاع دائم ببرنامجك الأسبوعي.'
+                    ]
+                },
+                13: {
+                    icon: '🔢',
+                    title: 'حاسبة العلامات',
+                    points: [
+                        'أداة ذكية لحساب العلامة النهائية للمادة من خلال جمع العلامات الفرعية لكل سؤال.',
+                        'تجنب أخطاء الحساب اليدوي لمعرفة علامتك الكاملة في الاختبار بدقة متناهية وسرعة.',
+                        'إمكانية مراجعة توزيع النقاط على التمارين لتقييم أدائك في كل جزء من الاختبار بشكل منفصل.',
+                        'واجهة بسيطة وعملية تتيح لك إدخال عدد لا نهائي من العلامات الفرعية بنقرة واحدة.'
+                    ]
+                },
+                14: {
+                    icon: '🧪',
+                    title: 'المعمل الرياضي',
+                    points: [
+                        'حساب المثلثات: أدوات متقدمة للتعامل مع الزوايا والدوال المثلثية.',
+                        'الدوال والتحليل: دراسة تفصيلية للدوال، حساب النهايات، المشتقات والتكاملات.',
+                        'الجبر وكثيرات الحدود: حل المعادلات من مختلف الدرجات وتبسيط العبارات الجبرية.',
+                        'الحساب في ℤ (القسمة والموافقات): حساب القاسم المشترك الأكبر (PGCD)، المضاعف المشترك الأصغر، والأعداد الأولية.',
+                        'الاحتمالات: حساب التوفيقات، الترتيبات، والقوائم لحل مسائل الاحتمالات.',
+                        'المتتاليات العددية: أدوات مخصصة لحساب حدود المتتاليات الحسابية والهندسية.',
+                        'الأعداد المركبة: العمليات الأساسية على الأعداد المركبة، الشكل الجبري، الطويلة والمدة.'
+                    ]
+                },
+                15: {
+                    icon: '🧩',
+                    title: 'ألعاب العقل',
+                    points: [
+                        'مجموعة من الألعاب الذكية المصممة خصيصاً لتنشيط الذاكرة.',
+                        'رفع مستوى التركيز وسرعة البديهة من خلال تحديات ممتعة.',
+                        'استراحة تعليمية مفيدة بعيداً عن ضغط المذاكرة.',
+                        'كسب نقاط وخبرات (XP) إضافية عند إكمال التحديات بنجاح.'
+                    ]
+                }
+            };
 
-            // Modal Logic
-            const cards = document.querySelectorAll('.card');
-            const modal = document.getElementById('featureModal');
-            const closeBtn = document.querySelector('.close-btn');
-            const modalIcon = document.getElementById('modalIcon');
-            const modalTitle = document.getElementById('modalTitle');
-            const modalBody = document.getElementById('modalBody');
+            // Modal Logic
+            const cards = document.querySelectorAll('.card');
+            const modal = document.getElementById('featureModal');
+            const closeBtn = document.querySelector('.close-btn');
+            const modalIcon = document.getElementById('modalIcon');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalBody = document.getElementById('modalBody');
 
-            cards.forEach(card => {
-                card.addEventListener('click', () => {
-                    const index = card.getAttribute('data-index');
-                    const data = featureDetails[index];
-                    if(data) {
-                        modalIcon.textContent = data.icon;
-                        modalTitle.textContent = data.title;
-                        
-                        let pointsHtml = '<ul>';
-                        data.points.forEach(point => {
-                            pointsHtml += `<li>${point}</li>`;
-                        });
-                        pointsHtml += '</ul>';
-                        
-                        modalBody.innerHTML = pointsHtml;
-                        
-                        modal.style.display = 'flex';
-                        document.body.classList.add('no-scroll');
-                        setTimeout(() => {
-                            modal.classList.add('show');
-                        }, 10);
-                    }
-                });
-            });
+            cards.forEach(card => {
+                card.addEventListener('click', () => {
+                    const index = card.getAttribute('data-index');
+                    const data = featureDetails[index];
+                    if(data) {
+                        modalIcon.textContent = data.icon;
+                        modalTitle.textContent = data.title;
+                        
+                        let pointsHtml = '<ul>';
+                        data.points.forEach(point => {
+                            pointsHtml += `<li>${point}</li>`;
+                        });
+                        pointsHtml += '</ul>';
+                        
+                        modalBody.innerHTML = pointsHtml;
+                        
+                        modal.style.display = 'flex';
+                        document.body.classList.add('no-scroll');
+                        setTimeout(() => {
+                            modal.classList.add('show');
+                        }, 10);
+                    }
+                });
+            });
 
-            // Close Modal Handlers
-            const closeModal = () => {
-                modal.classList.remove('show');
-                document.body.classList.remove('no-scroll');
-                setTimeout(() => {
-                    modal.style.display = 'none';
-                }, 300);
-            };
+            // Close Modal Handlers
+            const closeModal = () => {
+                modal.classList.remove('show');
+                document.body.classList.remove('no-scroll');
+                setTimeout(() => {
+                    modal.style.display = 'none';
+                }, 300);
+            };
 
-            closeBtn.addEventListener('click', closeModal);
+            closeBtn.addEventListener('click', closeModal);
 
-            window.addEventListener('click', (e) => {
-                if (e.target === modal) {
-                    closeModal();
-                }
-            });
-        });
-    </script>
+            window.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+        });
+    </script>
 </body>
 </html>
