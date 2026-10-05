@@ -174,3 +174,4 @@ appnexus.com, 17973, RESELLER, f5ab79cb980f11d1
 sharethrough.com, UvcAx8IL, RESELLER, d53b998a7bd4ecd2
 bold-win.com, 1189, RESELLER, 71746737d0bab951
 sharethrough.com, SniqCOMC, RESELLER, d53b998a7bd4ecd2
+smaato.com, 1100059345, RESELLER, 07bcf65f187117b4
